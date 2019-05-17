@@ -2,7 +2,7 @@ import ItunesService from "./itunes-service.js";
 //Private
 let itunesService = new ItunesService()
 
-function drawSongs() {
+function _drawSongs() {
   let songs = itunesService.Songs
   let template = ''
   for (let i = 0; i < songs.length; i++) {
@@ -19,11 +19,24 @@ function drawSongs() {
 //PUBLIC
 class ItunesController {
   constructor() {
-    drawSongs()
+    _drawSongs()
     //BE SURE TO REGISTER YOUR SUBSCRIBERS!!!!!!!
-    itunesService.addSubscriber('songs', drawSongs)
+    itunesService.addSubscriber('songs', _drawSongs)
   }
 
+  // addSongs(event) {
+  //   event.preventDefault()
+  //   let card = event.target
+  //   let rawData = {
+  //     albumArt: card.albumArt.value,
+  //     title: card.title.value,
+  //     artist: card.artist.value,
+  //     collection: card.collection.value,
+  //     price: card.price.value,
+  //     preview: card.preview.value
+  //   }
+  //   itunesService.addSongs(rawData)
+  // }
 
   //DO NOT MODIFY THIS METHOD
   getMusic(e) {

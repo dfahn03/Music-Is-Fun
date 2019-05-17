@@ -1,0 +1,19 @@
+body {
+  background-image: url('')
+  background-attachment: fixed;
+}
+
+.card-columns {
+  display: inline-table;
+  -webkit-column-break-inside: avoid;
+  inline-size: 25vh;
+}
+/* .card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+  display: flex;
+} */
