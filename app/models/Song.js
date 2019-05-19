@@ -10,14 +10,16 @@ export default class Song {
     }
     get Template() {
         return `
-        <div class="card card-columns text-white border-primary">
+        <div class="col-sm-6 card" style="width: 18em">
             <img src="${this.albumArt}" class="card-img-top" alt="Album Art">
             <div class="card-body">
-                <h5 class="card-title">Title: ${this.title}</h5>
-                <p small class="card-text">Artist: ${this.artist}</p>
-                <p small class="card-text">Album: ${this.collection}</p>
-                <p small class="card-text">Price: ${this.price}</p>
-                
+                <h6 class="card-title mb-1"><b>Title: ${this.title}</b></h6>
+                <p small class="card-text mb-1"><b>Artist: ${this.artist}</b></p>
+                <p small class="card-text mt-1 mb-1"><b>Album: ${this.collection}</b></p>
+                <p small class="card-text mt-1 mb-1"><b>Price: ${this.price}</b></p>
+                <audio controls loop id="audio" class="audio-tag p-0">
+                    <source src="${this.preview}" type="audio/mpeg">
+                </audio>
             </div>
         </div>
         `

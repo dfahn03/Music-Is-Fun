@@ -16,6 +16,8 @@ function _drawSongs() {
 }
 
 
+
+
 //PUBLIC
 class ItunesController {
   constructor() {
@@ -24,19 +26,6 @@ class ItunesController {
     itunesService.addSubscriber('songs', _drawSongs)
   }
 
-  // addSongs(event) {
-  //   event.preventDefault()
-  //   let card = event.target
-  //   let rawData = {
-  //     albumArt: card.albumArt.value,
-  //     title: card.title.value,
-  //     artist: card.artist.value,
-  //     collection: card.collection.value,
-  //     price: card.price.value,
-  //     preview: card.preview.value
-  //   }
-  //   itunesService.addSongs(rawData)
-  // }
 
   //DO NOT MODIFY THIS METHOD
   getMusic(e) {
